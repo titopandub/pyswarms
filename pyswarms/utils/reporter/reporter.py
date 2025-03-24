@@ -97,19 +97,10 @@ class Reporter(object):
                     "class": "logging.StreamHandler",
                     "formatter": "standard",
                 },
-                "file_default": {
-                    "level": "INFO",
-                    "formatter": "standard",
-                    "class": "logging.handlers.RotatingFileHandler",
-                    "filename": self.log_path,
-                    "encoding": "utf8",
-                    "maxBytes": 10485760,
-                    "backupCount": 20,
-                },
             },
             "loggers": {
                 "": {
-                    "handlers": ["default", "file_default"],
+                    "handlers": ["default"],
                     "level": "INFO",
                     "propagate": True,
                 }
